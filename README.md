@@ -12,6 +12,13 @@ Proxy-Updater++ create static local IPs to your rotate proxies from webshare.io.
 Change the APIKey with your API from webshare.io in main.h than open the program, it will create static IPs starting with 127.0.0.x:9000, just use those IPs in your program, all requests will be redirect to the current proxy IP. The program checks for new proxies each 2 minutes. BE SURE you are an admin.
 ![cyex](https://i.imgur.com/Dr9Rsw5.gif)
 
+## Tip:
+Sometimes your program freezes for no reason waiting for the user press enter, to prevent this just uncheck QuickEdit mode in your console.
+```
+Property > Options > Edit Options > QuickEdit Mode
+```
+![cyex](https://i.stack.imgur.com/mgCgk.gif)
+
 ## Requirements:
 #### Windows 10 
 #### IP Authentication Method in webshare.io
