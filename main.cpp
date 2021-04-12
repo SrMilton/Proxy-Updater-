@@ -22,13 +22,13 @@ int main()
         {
 
             first = readBuffer.find("count") + 7;
-            last = readBuffer.find(",");
             count2 = readBuffer.substr(first, last - first); //Pegar só o count
+            last = readBuffer.find(',');
             contagem = stoi(count2);
             //cout << contagem << endl;
 
             first = readBuffer.find("proxy_address") + 16;
-            last = readBuffer.find(",", first) - 1;
+            last = readBuffer.find(',', first) - 1;
             ip = readBuffer.substr(first, last - first);
 
             if (ip.compare(lastip) != 0)
@@ -38,11 +38,11 @@ int main()
                 for (i = 1; i < contagem + 1; i++)
                 {
                     first = readBuffer.find("proxy_address", rodada) + 16;
-                    last = readBuffer.find(",", first) - 1;
+                    last = readBuffer.find(',', first) - 1;
                     ip = readBuffer.substr(first, last - first);
 
                     first = readBuffer.find("ports", rodada) + 15;
-                    last = readBuffer.find(",", first);
+                    last = readBuffer.find(',', first);
                     port = readBuffer.substr(first, last - first);
                     //cout << ip << ":" << port << "[" << i << "]" << endl;
                     rodada = last;
